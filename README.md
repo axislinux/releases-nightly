@@ -20,32 +20,5 @@
 
 Creator: [XXCoreRangerX](https://github.com/XXCoreRangerX) (mail@xxcore.pl)
 
-## What does each file do
-| File | Meaning |
-| ------------- | ------------- |
-| axislinux-XXXX.XX.XX-NIGHTLY-x86_64.iso | The installation file |
-| axislinux-XXXX.XX.XX-NIGHTLY-x86_64.iso.sig | The signature of the `iso` |
-| axislinux-XXXX.XX.XX-NIGHTLY-x86_64.iso.sha512sum | The checksum of the `iso` |
-
-## How to check the ISO integrity
-**Make sure to download all the release files (`ISO`, `SIG` and `sha512sum`) and that they are in the same directory.**
-
-1. Add the key to gpg 
-```console
-gpg --recv-keys A182D760A59FDFDD
-```
-
-2. Then, verify gpg key of the file
-```console
-gpg --verify axislinux-XXXX.XX.XX-NIGHTLY-x86_64.iso.sig axislinux-XXXX.XX.XX-x86_64.iso
-```
-*The output should be XXCoreRangerX's public gpg key fingerprint (currently `FD11A3293A6830E6D28E1408A182D760A59FDFDD`).*
-
-3. Lastly, check sha512 checksum
-```console
-sha512sum --check axislinux-XXXX.XX.XX-NIGHTLY-x86_64.iso.sha512sum
-```
-*This command should tell whether the checksum is correct.*
-
 ## License
 This project is licensed under the [GPL-3.0 license](https://github.com/axislinux/releases-nightly/blob/master/LICENSE).
