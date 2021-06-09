@@ -9,6 +9,8 @@
 
 <p align="center"><img alt="powered-by-electricity" src="https://forthebadge.com/images/badges/built-with-love.svg"/></p>
 
+<p align="center"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/axislinux/releases-nightly/Build%20Axis%20Linux%20ISO?style=for-the-badge"></p>
+
 <p align="center">
   <img alt="latest-release" src="https://img.shields.io/github/v/release/axislinux/releases?include_prereleases&style=for-the-badge"/>
   <img alt="license" src="https://img.shields.io/github/license/axislinux/releases?style=for-the-badge"/>
