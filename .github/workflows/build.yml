@@ -65,7 +65,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.date.outputs.date }}-NIGHTLY
-          files: axis-live/out/axislinux*
+          files: axis-live/out/axislinux-NIGHTLY-$(date +'%Y.%m.%d')-x86_64.iso
           body_path: RELEASE.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
