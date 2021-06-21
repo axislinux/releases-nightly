@@ -49,10 +49,6 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y.%m.%d')"
       
-      - name: Download RELEASE.md
-        run: |
-          wget -O RELEASE.md https://raw.githubusercontent.com/axislinux/releases-nightly/master/RELEASE.md
-
       - name: Create a Tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.5
@@ -65,7 +61,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.date.outputs.date }}-NIGHTLY
-          files: axis-live/out/axislinux-NIGHTLY-$(date +'%Y.%m.%d')-x86_64.iso
+          files: axis-live/out/axislinux*
           body_path: RELEASE.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
