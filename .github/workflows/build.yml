@@ -58,12 +58,11 @@ jobs:
           tag_prefix: 
 
       - name: Publish a Release
-        uses: softprops/action-gh-release@v1
+        uses: xxcorerangerx/action-gh-release@v1.0.1
         with:
           tag_name: ${{ steps.date.outputs.date }}-NIGHTLY
           files: |
             axis-live/out/axislinux*
-            RELEASE.md
           body_path: RELEASE.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
